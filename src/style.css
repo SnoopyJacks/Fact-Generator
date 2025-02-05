@@ -1,0 +1,19 @@
+.container {
+    background-color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 20px 40px;
+    margin:  120px auto;
+    border-radius: 40px;
+    max-width: 600px;
+}
+
+.output {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button {
+    border-radius: 40px;
+    background-color: blue;
+    font-size: large;
+}
