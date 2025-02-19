@@ -2,14 +2,18 @@
     background-color: #ff347f;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    padding: 20px 60px;
+    padding: 30px 50px;
     margin:  120px auto;
     border-radius: 20px;
     max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    color: white;
 }
 
 .output {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    margin-top: 15px;
 }
 
 button {
@@ -18,10 +22,21 @@ button {
     font-size: large;
     transition: 0.3s;
     cursor: pointer;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    color: #ff347f;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
 }
 
 button:hover {
     background-color: #f48db4;
+    color:white;
+    transform:scale(1.05);
 }
 
 .button {
@@ -30,15 +45,52 @@ button:hover {
 
 .topic-input {
     font-weight: 100;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 8px;
+    text-align: center;
+    width: 80%;
+    background: rgba(255,255,255,0.3);
+    color: white;
+    outline: none;
 }
+
+.topic-input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
 .fact-box {
-font-size: large;
-padding: 15px;
-border-radius: 8px;
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.2);
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
 }
 
 footer {
     font-size: 12px;
-    text-decoration: none;
     padding-top: 40px;
+    color: white;
+    opacity: 0.8;
+}
+
+
+button::after {
+    content:" 🎉";
+}
+
+/*Mobile Friendly/*
+@media (max-width:600px) {
+    .container {
+    padding: 20px;
+    }
+    button {
+    font-size: medium;
+    padding: 10px 20px;
+    }
 }
