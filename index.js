@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("button");
-    const factBox = document.getElementById("fact-box");
-    const inputField = document.querySelector("input")
+    const factBox = document.querySelector(".output");
+    const inputField = document.querySelector("input");
 
     button.addEventListener("click", async () => {
         const topic = inputField.value.trim();
@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
             factBox.innerHTML="Please enter a topic";
             return;
         }
-
 
         try {
             //Get random fact from wikipedia API
