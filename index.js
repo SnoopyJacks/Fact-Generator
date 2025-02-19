@@ -1,9 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("button");
-    const factBox = document.querySelector(".output");
-    const inputField = document.querySelector("input");
+    const factBox = document.getElementById("fact-box");
+    const inputField = document.getElementById("topic-input");
 
-    button.addEventListener("click", async () => {
+    document.querySelector("form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        fetchFact();
+    });
+
+    button.addEventListener("click", (event) => {
+        event.preventDefault();
+        fetchFact();
+    });
+
+    async function fetchFact() {
         const topic = inputField.value.trim();
         if (!topic) {
             factBox.innerHTML="Please enter a topic";
@@ -23,9 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 delay: 40,
             });
 
-            typewriter
-                .typeString(data.extract)  
-                .start();
+            typewriter.typeString(data.extract).start();
         } else {
             factBox.innerHTML = "No fact found on this topic. Please try again."
             }
@@ -33,5 +41,5 @@ document.addEventListener("DOMContentLoaded", () => {
             factBox.innerHTML = "Oops! Something went wrong.  Please try again.";
             console.error("Error fetching fact:", error);
          }
-    });
+    }
 });
